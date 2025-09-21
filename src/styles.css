@@ -1,0 +1,126 @@
+:root {
+  --whatsapp-green: #075e54;
+  --whatsapp-light-green: #128c7e;
+  --whatsapp-bg: #ece5dd;
+  --whatsapp-card-bg: #ffffff;
+  --whatsapp-text: #333;
+  --whatsapp-bubble-received: #e8e8e8;
+  --whatsapp-bubble-sent: #dcf8c6;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.16);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--whatsapp-text);
+  background-color: var(--whatsapp-bg);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+header {
+  background-color: var(--whatsapp-green);
+  color: #fff;
+  padding: 1rem 1.5rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+header nav a, header button {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+header button:hover {
+  opacity: 0.8;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.page-container {
+  background-color: var(--whatsapp-card-bg);
+  padding: 2.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.career-card {
+  background-color: var(--whatsapp-bubble-received);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+button {
+  background-color: var(--whatsapp-light-green);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0b7367;
+}
+
+input[type="text"] {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: var(--whatsapp-bubble-sent);
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  margin: 0.5rem 0;
+}
